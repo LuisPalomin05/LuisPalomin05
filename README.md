@@ -2,4 +2,7 @@
 <h3 align="center"> Desarrollo de Software </h3>
 <p align="center">
  <a href = "mailto: oumw.udesh@gmail.com"><img align="center" src="https://seeklogo.com/images/G/gmail-new-2020-logo-32DBE11BB4-seeklogo.com.png" height="30" width="40" /></a>
+ <a href = "https://github.com/LuisPalomin05"><img align="center" src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" height="30"  /></a>
+
+
 </p>
