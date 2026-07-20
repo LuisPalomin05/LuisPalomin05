@@ -1,0 +1,12 @@
+.layout {
+  width: 100%;
+
+  display: grid;
+  grid:
+    "body right" 1fr
+    / 1fr 440px;
+  gap: 8px;
+}
+
+.body { grid-area: body; }
+.right { grid-area: right; }
