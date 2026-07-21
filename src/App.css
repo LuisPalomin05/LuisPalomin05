@@ -1,12 +1,54 @@
 .layout {
   width: 100%;
-
+  background: #f5f5f5;
   display: grid;
   grid:
     "body right" 1fr
     / 1fr 440px;
-  gap: 8px;
+  gap: 4px;
 }
 
 .body { grid-area: body; }
 .right { grid-area: right; }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.nav-links{
+list-style: none;
+display: flex;
+gap: 20px;
+}
+
+.nav-links li{
+  padding: 5px 8px;
+  color: var(--accent);
+  border-bottom: 2px solid transparent;
+}
+
+.nav-links li:hover{
+  color: var(--accent);
+  border-bottom: 2px solid #3771bd;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a{
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.btn-cv-download{
+  padding: 10px 20px;
+  background-color: var(--accent);
+  color: var(--text-w);
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}

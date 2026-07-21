@@ -1,10 +1,15 @@
-
+import Home from "./pages/Home";
+import Aside from "./components/Aside";
 import "./App.css";
 
 function App() {
   return <section class="layout">
-  <div class="body">1</div>
-  <div class="right">2</div>
+  <div class="body">
+    <Home />
+  </div>
+  <div class="right">
+    <Aside />
+  </div>
 </section>;
 }
 
