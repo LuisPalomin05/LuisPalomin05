@@ -8,47 +8,112 @@
   gap: 4px;
 }
 
-.body { grid-area: body; }
-.right { grid-area: right; }
+.body {
+  grid-area: body;
+}
+.right {
+  grid-area: right;
+}
+
+.shortLetter {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  background-color: var(--bg);
+  padding: 5px 15px;
   color: var(--text);
+background: red;
 }
 
-.nav-links{
-list-style: none;
-display: flex;
-gap: 20px;
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
-.nav-links li{
+.nav-links li {
   padding: 5px 8px;
   color: var(--accent);
-  border-bottom: 2px solid transparent;
+  border-bottom: 3px solid transparent;
 }
 
-.nav-links li:hover{
-  color: var(--accent);
-  border-bottom: 2px solid #3771bd;
+.nav-links li:hover {
+  border-bottom: 3px solid #3771bd;
   transition: all 0.3s ease;
 }
 
-.nav-links li a{
+.nav-links li a {
   text-decoration: none;
   color: var(--text);
   font-weight: 500;
 }
 
-.btn-cv-download{
-  padding: 10px 20px;
+.nav-links a:hover,
+.capitalLetter {
+  color: #3771bd;
+}
+
+.btn-cv-download {
+  padding: 8px 20px;
+  font-size: 0.7rem;
   background-color: var(--accent);
   color: var(--text-w);
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.hero-text {
+  background: url("./assets/wireframe/personedt.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.sayHello {
+  background-color: #bce4c179;
+  color: #1ae274;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.surname {
+  color: #3771bd;
+}
+
+.signature {
+  border-right: 3px solid #1057b4;
+  padding-right: 8px;
+  display: inline-block;
+}
+
+.legend {
+  width: 50%;
+}
+
+.btns-hero button {
+  padding: 10px 20px;
+  font-size: 0.7rem;
+
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.btns-hero button:nth-child(1) {
+  background-color: #191f27;
+  color: var(--text-w);
 }

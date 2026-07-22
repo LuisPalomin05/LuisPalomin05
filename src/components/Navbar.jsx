@@ -3,7 +3,7 @@ import BtnCvDownload from "./BtnCvDownload";
 const Navbar = () => {
   return (
     <div className="navbar">
-      <h1>Lp.Dev</h1>
+      <h1 className="shortLetter"> <span className="capitalLetter">L</span>p.</h1>
       <ul className="nav-links">
         <li> <a href="">Inicio</a> </li>
         <li> <a href="">Sobre mí</a> </li>
