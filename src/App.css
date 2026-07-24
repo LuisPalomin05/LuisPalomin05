@@ -26,7 +26,6 @@
   align-items: center;
   padding: 5px 15px;
   color: var(--text);
-background: red;
 }
 
 .nav-links {
@@ -58,7 +57,10 @@ background: red;
 }
 
 .btn-cv-download {
-  padding: 8px 20px;
+  padding: 4px 15px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
   font-size: 0.7rem;
   background-color: var(--accent);
   color: var(--text-w);
@@ -74,33 +76,61 @@ background: red;
   width: 100%;
 }
 
+.hero-btns-social {
+  display: flex;
+  flex-direction: column;
+
+  padding: 10px 0px;
+  gap: 10px;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: var(--social-bg); */
+  color: var(--text);
+  cursor: pointer;
+}
+
 .sayHello {
-  background-color: #bce4c179;
-  color: #1ae274;
+  background-color: #bce4c15d;
+  color: #1fcc6d;
   display: inline-block;
   padding: 5px 10px;
   border-radius: 5px;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   cursor: pointer;
 }
 
 .name {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
+  margin: 10px 0px 5px 0px;
 }
 
-.surname {
+.surname, .elementIcon {
   color: #3771bd;
 }
 
 .signature {
   border-right: 3px solid #1057b4;
   padding-right: 8px;
+  margin: 5px 0px 15px 0;
   display: inline-block;
 }
 
 .legend {
   width: 50%;
+  font-size: 0.8rem;
 }
 
 .btns-hero button {
@@ -116,4 +146,77 @@ background: red;
 .btns-hero button:nth-child(1) {
   background-color: #191f27;
   color: var(--text-w);
+}
+
+.heroPerfil {
+  padding: 0px 25px 0px 25px;
+}
+
+/* hero-text-about */
+
+.hero-text-about {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.hero-text-about-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.AboutSubtitle {
+  color: #191f27;
+  font-weight: 500;
+}
+
+.elementItem{
+  min-height: 35px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  color: #191f27;
+  font-weight: 500;
+  align-items: center;
+  cursor: pointer;
+}
+
+.elementItem:hover{
+background: #dfdede6b;
+}
+
+
+.itemAbouts{
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-top: 8px;
+  padding: 0 10px;
+}
+
+/* text-subtitle */
+.text-subtitle {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.subtitle-icon {
+  color: #3771bd;
+  font-weight: bold;
+}
+
+.subtitle-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.subtitle-legend p {
+  margin: 0px;
+  color: #191f27;
+  font-weight: 500;
 }

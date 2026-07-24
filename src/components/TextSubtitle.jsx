@@ -2,12 +2,12 @@
 
 const TextSubtitle = ({icon, text, subtitle}) => {
   return (
-    <div>
-      <div>
-        <img src={icon} alt="icon" />
+    <div className="text-subtitle">
+      <div className="subtitle-icon">
+        {icon}
       </div>
-      <div>
-        <h2>{text}</h2>
+      <div className="subtitle-legend">
+        <p>{text}</p>
         <small>{subtitle}</small>
       </div>
     </div>
