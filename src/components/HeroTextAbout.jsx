@@ -4,6 +4,8 @@ import { GoProjectSymlink } from "react-icons/go";
 import { BsGeoAlt } from "react-icons/bs";
 import { MdWorkOutline } from "react-icons/md";
 import { PiStudentFill } from "react-icons/pi";
+import { IoIosTimer } from "react-icons/io";
+import { FaProjectDiagram } from "react-icons/fa";
 
 const HeroTextAbout = () => {
   const AboutSubtitle = [
@@ -13,12 +15,12 @@ const HeroTextAbout = () => {
 
   const AboutElements = [
     {
-      icon: <PiStudentFill />,
+      icon: <BsGeoAlt />,
       titulos: "Lima, Peru",
       texto: "I ❤️ Peru",
     },
     {
-      icon: <BsGeoAlt />,
+      icon: <PiStudentFill />,
       titulos: "Cibertec",
       texto: "Cursado : 2022 - Actualidad",
     },
@@ -28,11 +30,20 @@ const HeroTextAbout = () => {
       texto: "Torque-G46 : 2024 - Actualidad",
     },
     {
-      icon: <BsGeoAlt />,
+      icon: <IoIosTimer />,
       titulos: "Aprendizaje Constante",
       texto: "Me gusta aprender nuevas tecnologias :)",
     },
   ];
+
+  const PROYECTSELEMENTS = [
+    {
+      icon: <FaProjectDiagram />,
+      nombre: "SCE contable",
+      informacion: "sistema para la gestion de cotizaciones y ventas",
+      tags: ['Java', 'Html', 'Postgres'],
+    }
+  ]
 
   return (
     <div className="hero-text-about">
@@ -61,6 +72,33 @@ const HeroTextAbout = () => {
           text={"Proyectos destacados"}
           subtitle={AboutSubtitle[1]}
         />
+
+        {
+          PROYECTSELEMENTS.map((elmt, index) => {
+            return (
+              <div key={index} className="cardProject">
+                <div className="cardProjectTitle">
+                 <span style={{color:'#2d6fd1'}}>{elmt.icon} </span> {elmt.nombre}
+                </div>
+                <div>
+                  <p className="cardProjectInfo">{elmt.informacion}</p>
+                  <div className="contentTagProject">
+                    {
+                      elmt.tags.map((itm, idx) => {
+                        return (
+                          <div key={idx} className="tagProject">
+                            {itm}
+                          </div>
+                        )
+                      })
+                    }
+                  </div>
+                </div>
+              </div>
+            )
+          })
+        }
+
       </div>
     </div>
   );

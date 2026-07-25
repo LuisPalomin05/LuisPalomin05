@@ -3,14 +3,14 @@ import Aside from "./components/Aside";
 import "./App.css";
 
 function App() {
-  return <section class="layout">
-  <div class="body">
-    <Home />
-  </div>
-  <div class="right">
-    <Aside />
-  </div>
-</section>;
+  return <section className="layout">
+    <div className="body">
+      <Home />
+    </div>
+    <div className="right">
+      <Aside />
+    </div>
+  </section>;
 }
 
 export default App;
