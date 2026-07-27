@@ -1,16 +1,12 @@
-import React from 'react'
+import React from "react";
 
-export const BoxLenguageItem = ({name,urlImage, icono}) => {
+ const BoxLenguageItem = ({ name, urlImage, icono }) => {
   return (
     <div>
-       <p> {name} </p>
-       {
-       urlImage ? (
-       <image src={urlImage}></image>) : (
-       icono
-       )
-       }
-       
+      {urlImage ? <img src={urlImage}/> : icono}
+      <p> {name} </p>
     </div>
-  )
-}
+  );
+};
+
+export default BoxLenguageItem;

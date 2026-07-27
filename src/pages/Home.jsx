@@ -1,12 +1,19 @@
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
-
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 const Home = () => {
   return (
-    <div>
+    <Router>
       <Navbar />
-      <Hero />
-    </div>
+
+      <Routes>
+        <Route path="/" element={<Hero />} />
+
+
+
+        
+      </Routes>
+    </Router>
   );
 };
 

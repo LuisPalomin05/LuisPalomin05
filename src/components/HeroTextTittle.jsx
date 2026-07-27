@@ -1,32 +1,65 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { useState } from "react";
+import { FaGithub, FaYoutube, FaLinkedin } from "react-icons/fa";
 import { MdMailOutline } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const HeroTextTittle = () => {
-  return (
-      <div className="hero-text">
-        <p className="sayHello"> 👋🏼 Hola, soy</p>
-        <h2 className="name">Luis Alfredo</h2>
-        <h2 className="name surname">Palomino Medina</h2>
-        <h4 className="signature">Desarrollo de Software</h4>
 
-        <p className="legend">
-          Estudiante de Computación e informática apasionado por construir
-          aplicaciones web escalables y software para resolver problemas reales
-          mediante codigo limpio y buenas prácticas.
-        </p>
-        <div className="hero-btns-social">
-          <div className="btns-hero">
-            <button>Ver proyectos</button>
-            <button>Contactarme</button>
-          </div>
+  const mail =
+    "lpalomino7030@gmail.com";
 
-          <div className="socials">
-            <FaGithub className="social" />
-            <FaLinkedin className="social" />
-            <MdMailOutline className="social" />
-          </div>
+  function mailInfo(mail) {
+   const mailtosend =
+    `mailto:${mail}?subject=Hola%20Luis&body=Vi%20tu%20portfolio%20y%20me%20gustaría%20hablar%20contigo.`;
+  
+    return mailtosend;
+  }
+
+  
+    const [mostrarTooltip, setMostrarTooltip] = useState(false);
+
+    return (
+    <div className="hero-text">
+      <p className="sayHello"> 👋🏼 Hola, soy</p>
+      <h2 className="name">Luis Alfredo</h2>
+      <h2 className="name surname">Palomino Medina</h2>
+      <h4 className="signature">Desarrollo de Software</h4>
+
+      <p className="legend">
+        Desarrollo aplicaciones enfocadas en resolver problemas reales mediante
+        Java, Spring Boot y React. Me interesa crear software escalable y
+        mantener un aprendizaje constante.
+      </p>
+      <div className="hero-btns-social">
+        <div className="btns-hero">
+          <Link className="Links-hero" to={"/project"}>
+            Ver proyectos
+          </Link>
+          <Link className="Links-hero" to={"/contact"}>
+            Contactarme
+          </Link>
+        </div>
+
+        <div className="socials">
+          <Link className="social" to={"https://github.com/lpalomino7030"}>
+            <FaGithub className="tooltip-icon-button" />
+          </Link>
+          <Link className="social" to={""}>
+            <FaLinkedin className="tooltip-icon-button" />
+          </Link>
+          <Link className="social" to={mailInfo(mail)} onMouseEnter={()=> setMostrarTooltip(!mostrarTooltip)} onMouseLeave={()=> setMostrarTooltip(!mostrarTooltip)}>
+            <MdMailOutline className="tooltip-icon-button" />
+            {mostrarTooltip && (<div className="tooltip-text"><p>📧 Enviarme un correo</p> <p>{mail}</p></div>)}
+          </Link>
+          <Link
+            className="social"
+            to={"https://www.youtube.com/@LuisAlfredoPalominoMedina"}
+          >
+            <FaYoutube className="tooltip-icon-button" />
+          </Link>
         </div>
       </div>
+    </div>
   );
 };
 

@@ -52,6 +52,10 @@ body {
   margin: 0;
 }
 
+Link, a{
+  text-decoration: none;
+}
+
 #root {
   max-width: 100%;
   margin: 0;

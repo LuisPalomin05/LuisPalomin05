@@ -2,8 +2,7 @@
   width: 100%;
   background: #ffffff;
   display: grid;
-  grid:
-    "body right" 1fr / 1fr 440px;
+  grid: "body right" 1fr / 1fr 440px;
   gap: 4px;
 }
 
@@ -45,7 +44,7 @@
   transition: all 0.3s ease;
 }
 
-.nav-links li a {
+.nav-links-item {
   text-decoration: none;
   color: var(--text);
   font-weight: 500;
@@ -90,17 +89,6 @@
   gap: 10px;
 }
 
-.social {
-  width: 25px;
-  height: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* background-color: var(--social-bg); */
-  color: var(--text);
-  cursor: pointer;
-}
-
 .sayHello {
   background-color: #bce4c15d;
   color: #1fcc6d;
@@ -140,19 +128,66 @@
   gap: 10px;
 }
 
-.btns-hero button {
-  padding: 10px 20px;
+.Links-hero {
+  padding: 5px 20px;
   font-size: 0.7rem;
-
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
   border: none;
 }
 
-.btns-hero button:nth-child(1) {
+.Links-hero:nth-child(1) {
   background-color: #191f27;
   color: var(--text-w);
+}
+.Links-hero:nth-child(2) {
+  background-color: #e8ebf0;
+  color: #191f27;
+}
+
+.social {
+  width: 25px;
+  height: 25px;
+  font-size: 1.2rem;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text);
+}
+
+.tooltip-icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.social:hover:nth-child(1) {
+  color: #191f27;
+}
+.social:hover:nth-child(2) {
+  color: #0a66c2;
+}
+.social:nth-child(3):hover {
+  color: #cc5353;
+}
+.social:nth-child(4):hover {
+  color: #ff0033;
+}
+
+.tooltip-text {
+  background: #000000ef;
+  position: absolute;
+  color: white;
+  border-radius: 5px;
+  width: 280px;
+  height: 80px;
+  top: 25px;
+  left: 8px;
+  padding: 4px;
+  z-index: 10;
+  font-size: 12px;
 }
 
 .heroPerfil {
@@ -165,7 +200,7 @@
   display: flex;
   flex-direction: row;
   gap: 10px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .hero-text-about-item {
@@ -194,7 +229,6 @@
   background: #dfdede6b;
 }
 
-
 .itemAbouts {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
@@ -209,6 +243,7 @@
   display: flex;
   flex-direction: row;
   gap: 10px;
+  margin-bottom: 10px;
   align-items: center;
 }
 
@@ -229,7 +264,7 @@
   font-weight: 500;
 }
 
-.cardProject{
+.cardProject {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -239,8 +274,8 @@
   background: rgb(249, 249, 249);
 }
 
-.cardProjectTitle{
-  font-size: .9rem;
+.cardProjectTitle {
+  font-size: 0.9rem;
   font-weight: 500;
   color: #191f27;
   height: 30px;
@@ -249,21 +284,49 @@
   gap: 10px;
 }
 
-.cardProjectInfo{
+.cardProjectInfo {
   color: #929496;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
-.contentTagProject{
+.contentTagProject {
   display: flex;
   flex-direction: row;
   gap: 5px;
 }
-.tagProject{
+.tagProject {
   background: #a6a6a67c;
   border-radius: 8px;
   padding: 2px 8px;
   color: #737577;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
+.perfilGitImage {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  border: 2px solid #92949652;
+}
+
+.nameGitUser {
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: #3771bd;
+}
+
+.GitInfoUser {
+  background: rgba(230, 228, 226, 0.651);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 150px;
+  border-radius: 25px;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.avatarGit {
+  min-width: 100;
+}
