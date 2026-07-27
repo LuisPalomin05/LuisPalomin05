@@ -7,8 +7,9 @@ const Hero = () => {
   return (
     <section className="heroPerfil">
       <HeroTextTittle />
-      <HeroTextAbout />
       <HeroGitElements />
+      <HeroTextAbout />
+      {/* <HeroGitElements /> */}
     </section>
   );
 };

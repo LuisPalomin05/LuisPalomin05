@@ -41,22 +41,22 @@ const HeroTextTittle = () => {
         </div>
 
         <div className="socials">
-          <Link className="social" to={"https://github.com/lpalomino7030"}>
-            <FaGithub className="tooltip-icon-button" />
-          </Link>
-          <Link className="social" to={""}>
-            <FaLinkedin className="tooltip-icon-button" />
-          </Link>
-          <Link className="social" to={mailInfo(mail)} onMouseEnter={()=> setMostrarTooltip(!mostrarTooltip)} onMouseLeave={()=> setMostrarTooltip(!mostrarTooltip)}>
-            <MdMailOutline className="tooltip-icon-button" />
+          <a className="social" href={"https://github.com/lpalomino7030"}>
+            <FaGithub className="tooltip-icon-button GitHub" />
+          </a>
+          <a className="social" href={"/"}>
+            <FaLinkedin className="tooltip-icon-button Linkdin" />
+          </a>
+          <a className="social" href={mailInfo(mail)} onMouseEnter={()=> setMostrarTooltip(!mostrarTooltip)} onMouseLeave={()=> setMostrarTooltip(!mostrarTooltip)}>
+            <MdMailOutline className="tooltip-icon-button Email" />
             {mostrarTooltip && (<div className="tooltip-text"><p>📧 Enviarme un correo</p> <p>{mail}</p></div>)}
-          </Link>
-          <Link
-            className="social"
-            to={"https://www.youtube.com/@LuisAlfredoPalominoMedina"}
+          </a>
+          <a
+            className="social Youtube"
+            href={"https://www.youtube.com/@LuisAlfredoPalominoMedina"}
           >
             <FaYoutube className="tooltip-icon-button" />
-          </Link>
+          </a>
         </div>
       </div>
     </div>

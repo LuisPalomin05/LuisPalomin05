@@ -5,7 +5,7 @@ import { BsGeoAlt } from "react-icons/bs";
 import { MdWorkOutline } from "react-icons/md";
 import { PiStudentFill } from "react-icons/pi";
 import { IoIosTimer } from "react-icons/io";
-import { FaProjectDiagram } from "react-icons/fa";
+import { FaProjectDiagram, FaGithub, FaArrowRight } from "react-icons/fa";
 
 const HeroTextAbout = () => {
   const AboutSubtitle = [
@@ -36,14 +36,20 @@ const HeroTextAbout = () => {
     },
   ];
 
-  const PROYECTSELEMENTS = [
+  const PROJECTSELEMENTS = [
     {
       icon: <FaProjectDiagram />,
       nombre: "SCE contable",
       informacion: "sistema para la gestion de cotizaciones y ventas",
-      tags: ['Java', 'Html', 'Postgres'],
-    }
-  ]
+      tags: ["Java", "Html", "Postgres"],
+    },
+    {
+      icon: <FaProjectDiagram />,
+      nombre: "SCE contable",
+      informacion: "sistema para la gestion de cotizaciones y ventas",
+      tags: ["Java", "Html", "Postgres"],
+    },
+  ];
 
   return (
     <div className="hero-text-about">
@@ -57,10 +63,8 @@ const HeroTextAbout = () => {
           {AboutElements.map((element, index) => {
             return (
               <div key={index} className="elementItem">
-                <div>
-                  <span className="elementIcon"> {element.icon} </span>{" "}
-                  {element.titulos}
-                </div>
+                <span className="elementIcon"> {element.icon} </span>
+                {element.titulos}
               </div>
             );
           })}
@@ -72,33 +76,39 @@ const HeroTextAbout = () => {
           text={"Proyectos destacados"}
           subtitle={AboutSubtitle[1]}
         />
-
-        {
-          PROYECTSELEMENTS.map((elmt, index) => {
+        <div className="contentProject">
+          {PROJECTSELEMENTS.map((elmt, index) => {
             return (
               <div key={index} className="cardProject">
                 <div className="cardProjectTitle">
-                 <span style={{color:'#2d6fd1'}}>{elmt.icon} </span> {elmt.nombre}
+                  <span style={{ color: "#2d6fd1" }}>{elmt.icon} </span>{" "}
+                  {elmt.nombre}
                 </div>
                 <div>
                   <p className="cardProjectInfo">{elmt.informacion}</p>
                   <div className="contentTagProject">
-                    {
-                      elmt.tags.map((itm, idx) => {
-                        return (
-                          <div key={idx} className="tagProject">
-                            {itm}
-                          </div>
-                        )
-                      })
-                    }
+                    {elmt.tags.map((itm, idx) => {
+                      return (
+                        <div key={idx} className="tagProject">
+                          {itm}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+                <div className="actionProject">
+                  <FaGithub className="tooltip-icon-button GitHub" />
+                  <div className="arrowProject">
+                    Ver Proyecto
+                    
+                      <FaArrowRight />
+                    
                   </div>
                 </div>
               </div>
-            )
-          })
-        }
-
+            );
+          })}
+        </div>
       </div>
     </div>
   );

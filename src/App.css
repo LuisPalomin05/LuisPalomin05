@@ -163,16 +163,16 @@
   cursor: pointer;
 }
 
-.social:hover:nth-child(1) {
-  color: #191f27;
+.GitHub:hover {
+  color: #101214;
 }
-.social:hover:nth-child(2) {
+.Linkdin:hover {
   color: #0a66c2;
 }
-.social:nth-child(3):hover {
+.Email:hover {
   color: #cc5353;
 }
-.social:nth-child(4):hover {
+.Youtube:hover {
   color: #ff0033;
 }
 
@@ -181,11 +181,10 @@
   position: absolute;
   color: white;
   border-radius: 5px;
-  width: 280px;
-  height: 80px;
+  min-height: 60px;
   top: 25px;
   left: 8px;
-  padding: 4px;
+  padding: 4px 15px;
   z-index: 10;
   font-size: 12px;
 }
@@ -216,6 +215,7 @@
 
 .elementItem {
   min-height: 35px;
+  width: 100%;
   border-radius: 8px;
   font-size: 0.8rem;
   color: #191f27;
@@ -264,14 +264,21 @@
   font-weight: 500;
 }
 
+.contentProject {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
 .cardProject {
   display: flex;
   flex-direction: column;
+
   gap: 5px;
-  width: 50%;
+  width: 40%;
   padding: 4px;
   border-radius: 10px;
-  background: rgb(249, 249, 249);
+  background: rgba(230, 228, 226, 0.651);
 }
 
 .cardProjectTitle {
@@ -281,14 +288,34 @@
   height: 30px;
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
   gap: 10px;
 }
 
 .cardProjectInfo {
   color: #929496;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
 }
 
+.actionProject {
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+.arrowProject {
+  color: #2f568a;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.arrowProject:hover {
+  color: #3771bd;
+}
 .contentTagProject {
   display: flex;
   flex-direction: row;
@@ -296,10 +323,10 @@
 }
 .tagProject {
   background: #a6a6a67c;
-  border-radius: 8px;
-  padding: 2px 8px;
+  border-radius: 5px;
+  padding: 0 4px;
   color: #737577;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
 }
 
 .perfilGitImage {
