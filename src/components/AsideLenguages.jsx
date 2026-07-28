@@ -1,7 +1,5 @@
 import { Java } from "@dev.icons/react";
 import React from 'react'
-import AsideLenguages from "./AsideLenguages";
-
 
 export const AsideLenguages = () => {
   
@@ -16,7 +14,7 @@ export const AsideLenguages = () => {
   
   return (
     <div>
-      {LENGUAGESSKILL[0].Lenguajes[1].descripcion}
+      {LENGUAGESSKILL[0].Lenguajes[0].descripcion}
     </div>
   )
 }
