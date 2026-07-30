@@ -381,7 +381,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 5px;
   min-width: 55px;
   gap: 2px;
   font-size: .6rem;
+  cursor: pointer;
+}
+
+.iconoAside:hover{
+  background: rgba(253, 253, 253, 0.658);
 }
