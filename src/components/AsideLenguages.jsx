@@ -1,20 +1,37 @@
 import { Java } from "@dev.icons/react";
-import React from 'react'
+import { Javascript } from "@dev.icons/react";
+import React from "react";
 
-export const AsideLenguages = () => {
-  
-  const LENGUAGESSKILL = [
+const AsideLenguages = () => {
+  const SKILLS = [
     {
-      titulo:"Lenguajes",
-      Lenguajes:[{
-        icono:<Java size={32} />,
-        descripcion:'Java'
-      }]
-    }]
-  
+      titulo: "Lenguajes",
+      lenguajes: [
+        {
+          icono: <Java size={32} />,
+          descripcion: "Java",
+        },
+        {
+          icono: <Javascript size={32} />,
+          descripcion: "JavaScript",
+        },
+      ],
+    },
+  ];
+
   return (
-    <div>
-      {LENGUAGESSKILL[0].Lenguajes[0].descripcion}
+    <div className="asideLenguage">
+      <p>{SKILLS[0].titulo}</p>
+      <div className="iconoAsideBox">
+        {SKILLS[0].lenguajes.map((lenguaje, index) => (
+          <div className="iconoAside" key={index}>
+            {lenguaje.icono}
+            <span>{lenguaje.descripcion}</span>
+          </div>
+        ))}
+      </div>
     </div>
-  )
-}
+  );
+};
+
+export default AsideLenguages;

@@ -33,24 +33,31 @@
   gap: 20px;
 }
 
-.nav-links li {
+.nav-links-item {
   padding: 5px 8px;
   color: var(--accent);
   border-bottom: 3px solid transparent;
 }
 
-.nav-links li:hover {
-  border-bottom: 3px solid #3771bd;
-  transition: all 0.3s ease;
-}
+
 
 .nav-links-item {
   text-decoration: none;
   color: var(--text);
+  font-size: 14px;
   font-weight: 500;
 }
+.nav-links-item:hover {
+  border-bottom: 3px solid #3771bd;
+  transition: all 0.3s ease;
+    color: #3771bd;
 
-.nav-links a:hover,
+}
+.nav-links:hover{
+    color: #abadb1;
+}
+
+
 .capitalLetter {
   color: #3771bd;
 }
@@ -356,4 +363,25 @@
 
 .avatarGit {
   min-width: 100;
+}
+
+.asideLenguage, .iconoAside{
+  display: flex;
+  flex-direction: column;
+}
+
+.iconoAsideBox{
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+
+}
+
+.iconoAside{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 55px;
+  gap: 2px;
+  font-size: .6rem;
 }

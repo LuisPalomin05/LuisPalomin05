@@ -1,5 +1,6 @@
 import TextSubtitle from "./TextSubtitle";
 import { FaCode } from "react-icons/fa6";
+import AsideLenguages from "./AsideLenguages";
  
 
 const Aside = () => {
