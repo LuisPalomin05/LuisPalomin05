@@ -104,17 +104,17 @@ const SKILLS = [
   return (
     <>
       {SKILLS.map((grupo) => (
-        <div key={grupo.titulo}>
-          <h3>{grupo.titulo}</h3>
+        <div key={grupo.titulo.trim()}>
+          <p>{grupo.titulo}</p>
 
           <div className="iconoAsideBox">
             {grupo.tecnologias.map((skill) => {
               const Icono = skill.icono;
               return (
-                <div className="iconoAside" key={skill.descripcion}>
+                <a href={`/tecnologia/${skill.descripcion}`} className="iconoAside" key={skill.descripcion}>
                   <Icono size={32} />
                   <span>{skill.descripcion}</span>
-                </div>
+                </a>
               );
             })}
           </div>

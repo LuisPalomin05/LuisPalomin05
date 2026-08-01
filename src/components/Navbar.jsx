@@ -11,19 +11,19 @@ const Navbar = () => {
         <Link className="nav-links-item" to={"/"}>
           Inicio
         </Link>
-        <Link className="nav-links-item" to={"/about"}>
+        <Link className="nav-links-item" to={"/sobremi"}>
           Sobre mí
         </Link>
-        <Link className="nav-links-item" to={"/project"}>
+        <Link className="nav-links-item" to={"/proyectos"}>
           Proyectos
         </Link>
-        <Link className="nav-links-item" to={"/skill"}>
+        <Link className="nav-links-item" to={"/tecnologia"}>
           Tecnologias
         </Link>
         <Link className="nav-links-item" to={"/blog"}>
           Blog
         </Link>
-        <Link className="nav-links-item" to={"/contact"}>
+        <Link className="nav-links-item" to={"/contactar"}>
           Contacto
         </Link>
       </div>

@@ -33,24 +33,31 @@
   gap: 20px;
 }
 
+/*
 .nav-links-item {
   padding: 5px 8px;
   color: var(--accent);
   border-bottom: 3px solid transparent;
   user-select: none;
 }
+  */
 
 .nav-links-item {
   text-decoration: none;
   color: var(--text);
+  border-bottom: 3px solid transparent;
+    user-select: none;
+
   font-size: 14px;
   font-weight: 500;
 }
+
 .nav-links-item:hover {
   border-bottom: 3px solid #3771bd;
   transition: all 0.3s ease;
   color: #3771bd;
 }
+
 .nav-links:hover {
   color: #abadb1;
 }
@@ -75,7 +82,7 @@
 }
 
 .btn-cv-download:hover {
-background-color: #2458d3;
+  background-color: #3771bd;
 }
 
 .hero-text {
@@ -146,15 +153,22 @@ background-color: #2458d3;
   border-radius: 5px;
   cursor: pointer;
   border: none;
+  transition: background-color 0.25s ease;
 }
 
 .Links-hero:nth-child(1) {
   background-color: #191f27;
   color: var(--text-w);
 }
+
 .Links-hero:nth-child(2) {
   background-color: #e8ebf0;
   color: #191f27;
+}
+
+.Links-hero:hover {
+  background: #3771bd;
+  color: #ffffff;
 }
 
 .social {
@@ -177,12 +191,15 @@ background-color: #2458d3;
 .GitHub:hover {
   color: #101214;
 }
+
 .Linkdin:hover {
   color: #0a66c2;
 }
+
 .Email:hover {
   color: #cc5353;
 }
+
 .Youtube:hover {
   color: #ff0033;
 }
@@ -274,7 +291,10 @@ background-color: #2458d3;
   color: #191f27;
   font-weight: 500;
 }
-
+.subtitle-legend small {
+font-size: 0.7rem;
+  color: #929496;
+}
 .contentProject {
   display: flex;
   flex-direction: row;
@@ -315,6 +335,7 @@ background-color: #2458d3;
   align-items: center;
   justify-content: space-between;
 }
+
 .arrowProject {
   color: #2f568a;
   font-size: 14px;
@@ -327,11 +348,13 @@ background-color: #2458d3;
 .arrowProject:hover {
   color: #3771bd;
 }
+
 .contentTagProject {
   display: flex;
   flex-direction: row;
   gap: 5px;
 }
+
 .tagProject {
   background: #a6a6a67c;
   border-radius: 5px;
@@ -393,5 +416,8 @@ background-color: #2458d3;
 }
 
 .iconoAside:hover {
-  background: rgba(253, 253, 253, 0.658);
+  background: rgba(253, 253, 253,);
+  box-shadow: 0px 0px 0px 2px rgba(235,226,226,0.75);
+-webkit-box-shadow: 0px 0px 0px 2px rgba(235,226,226,0.75);
+-moz-box-shadow: 0px 0px 0px 2px rgba(235,226,226,0.75);
 }
