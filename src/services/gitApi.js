@@ -4,7 +4,7 @@ async function fetchGitHub(url) {
   const response = await fetch(url);
 
   if (!response.ok) {
-    `${response.status} ${response.statusText}`;
+   throw new Error(`${response.status} ${response.statusText}`);
   }
 
   return response.json();

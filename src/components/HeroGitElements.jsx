@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getUser } from "../services/GitApi";
+import { getUser } from "../services/gitApi";
 import BoxLenguageItem from "./BoxLenguageItem";
 const HeroGitElements = () => {
   const [perfil, setPerfil] = useState(null);
@@ -13,8 +13,6 @@ const HeroGitElements = () => {
 
     cargarPerfil();
   }, []);
-
-  console.log(perfil);
 
   return (
     <div>

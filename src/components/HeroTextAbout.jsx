@@ -6,8 +6,12 @@ import { MdWorkOutline } from "react-icons/md";
 import { PiStudentFill } from "react-icons/pi";
 import { IoIosTimer } from "react-icons/io";
 import { FaProjectDiagram, FaGithub, FaArrowRight } from "react-icons/fa";
+import { useGitHub } from "../hooks/useGitHub";
 
 const HeroTextAbout = () => {
+
+
+
   const AboutSubtitle = [
     "Soy estudiante de la carrera de computacion e informatica en Cibertec.",
     "Algunos de los proyectos que he trabajado.",
@@ -50,6 +54,8 @@ const HeroTextAbout = () => {
       tags: ["Java", "Html", "Postgres"],
     },
   ];
+
+  const { repos } = useGitHub();
 
   return (
     <div className="hero-text-about">

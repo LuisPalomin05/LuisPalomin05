@@ -1,7 +1,16 @@
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
+import { useGitHub } from "../hooks/useGitHub";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+
+
+
+
 const Home = () => {
+    const { user } = useGitHub();
+
+    console.log(user);
+
   return (
     <Router>
       <Navbar />
@@ -13,6 +22,9 @@ const Home = () => {
 
         
       </Routes>
+      <footer>
+        <br />
+      </footer>
     </Router>
   );
 };
