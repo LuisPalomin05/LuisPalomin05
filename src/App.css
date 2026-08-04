@@ -405,7 +405,7 @@ font-size: 0.7rem;
 }
 
 .iconoAside {
-  display: flex;
+color: #3771bd;
   justify-content: center;
   align-items: center;
   border-radius: 5px;

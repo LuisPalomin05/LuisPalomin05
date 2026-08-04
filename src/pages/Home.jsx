@@ -4,12 +4,8 @@ import { useGitHub } from "../hooks/useGitHub";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 
-
-
 const Home = () => {
-    const { user } = useGitHub();
 
-    console.log(user);
 
   return (
     <Router>

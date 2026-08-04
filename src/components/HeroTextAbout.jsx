@@ -56,7 +56,9 @@ const HeroTextAbout = () => {
   ];
 
   const { repos } = useGitHub();
+  console.log(repos);
 
+  
   return (
     <div className="hero-text-about">
       <div className="hero-text-about-item">
