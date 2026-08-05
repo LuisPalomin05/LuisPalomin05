@@ -10,7 +10,9 @@ import { useGitHub } from "../hooks/useGitHub";
 
 const HeroTextAbout = () => {
 
+  const { user, repos } = useGitHub();
 
+  console.log(repos);
 
   const AboutSubtitle = [
     "Soy estudiante de la carrera de computacion e informatica en Cibertec.",
@@ -40,24 +42,20 @@ const HeroTextAbout = () => {
     },
   ];
 
-  const PROJECTSELEMENTS = [
-    {
-      icon: <FaProjectDiagram />,
-      nombre: "SCE contable",
-      informacion: "sistema para la gestion de cotizaciones y ventas",
-      tags: ["Java", "Html", "Postgres"],
-    },
-    {
-      icon: <FaProjectDiagram />,
-      nombre: "SCE contable",
-      informacion: "sistema para la gestion de cotizaciones y ventas",
-      tags: ["Java", "Html", "Postgres"],
-    },
-  ];
-
-  const { repos } = useGitHub();
-  console.log(repos);
-
+  // const PROJECTSELEMENTS = [
+  //   {
+  //     icon: <FaProjectDiagram />,
+  //     nombre: "SCE contable",
+  //     informacion: "sistema para la gestion de cotizaciones y ventas",
+  //     tags: ["Java", "Html", "Postgres"],
+  //   },
+  //   {
+  //     icon: <FaProjectDiagram />,
+  //     nombre: "SCE contable",
+  //     informacion: "sistema para la gestion de cotizaciones y ventas",
+  //     tags: ["Java", "Html", "Postgres"],
+  //   },
+  // ];
   
   return (
     <div className="hero-text-about">
@@ -84,7 +82,7 @@ const HeroTextAbout = () => {
           text={"Proyectos destacados"}
           subtitle={AboutSubtitle[1]}
         />
-        <div className="contentProject">
+        {/* <div className="contentProject">
           {PROJECTSELEMENTS.map((elmt, index) => {
             return (
               <div key={index} className="cardProject">
@@ -115,6 +113,33 @@ const HeroTextAbout = () => {
                 </div>
               </div>
             );
+          })}
+        </div> */}
+        <div className="contentProject">
+          {repos.map((repo) => {
+            return (
+              <div key={repo.id} className="cardProject">
+                <div className="cardProjectTitle">
+                  <span style={{ color: "#2d6fd1" }}>
+                    <FaProjectDiagram />
+                  </span>
+                  {repo.name}
+                </div>
+                <div>
+                  <p className="cardProjectInfo">{repo.description}</p>
+                  <div className="contentTagProject">
+                    <div className="tagProject">{repo.language}</div>
+                  </div>
+                </div>
+                <div className="actionProject">
+                  <FaGithub className="tooltip-icon-button GitHub" />
+                  <div className="arrowProject">
+                    Ver Proyecto
+                    <FaArrowRight />
+                  </div>
+                </div>
+              </div>
+            )
           })}
         </div>
       </div>
